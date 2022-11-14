@@ -1,5 +1,4 @@
--- Gui to Lua
--- Version: 3.2
+-- v1.4 fixed some stuff
 
 -- Instances:
 
@@ -42,7 +41,7 @@ local Storage = Instance.new("Folder")
 --Properties:
 
 FTF.Name = "FTF"
-FTF.Parent = game.CoreGui
+FTF.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 FTF.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
@@ -169,7 +168,7 @@ InfJump.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 InfJump.Position = UDim2.new(0.712381184, 0, 0.44358179, 0)
 InfJump.Size = UDim2.new(0.25, 0, 0.174999997, 0)
 InfJump.Font = Enum.Font.Ubuntu
-InfJump.Text = "InfJump"
+InfJump.Text = "InfJump: OFF"
 InfJump.TextColor3 = Color3.fromRGB(255, 255, 255)
 InfJump.TextScaled = true
 InfJump.TextSize = 14.000
@@ -267,7 +266,7 @@ Storage.Parent = Main
 
 -- Scripts:
 
-local function LOFNOWJ_fake_script() -- Main.Drag 
+local function XKNUSET_fake_script() -- Main.Drag 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -305,16 +304,16 @@ local function LOFNOWJ_fake_script() -- Main.Drag
 		end
 	end)
 end
-coroutine.wrap(LOFNOWJ_fake_script)()
-local function XBBQ_fake_script() -- Exit.ExitScript 
+coroutine.wrap(XKNUSET_fake_script)()
+local function IZINBX_fake_script() -- Exit.ExitScript 
 	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.MouseButton1Up:Connect(function()
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(XBBQ_fake_script)()
-local function RVUNRPC_fake_script() -- Minimize.Minimize 
+coroutine.wrap(IZINBX_fake_script)()
+local function TBGVUH_fake_script() -- Minimize.Minimize 
 	local script = Instance.new('LocalScript', Minimize)
 
 	t = script.Parent.Parent
@@ -349,8 +348,8 @@ local function RVUNRPC_fake_script() -- Minimize.Minimize
 		end
 	end)
 end
-coroutine.wrap(RVUNRPC_fake_script)()
-local function TPOA_fake_script() -- ESP.ESPScript 
+coroutine.wrap(TBGVUH_fake_script)()
+local function GSUGULN_fake_script() -- ESP.ESPScript 
 	local script = Instance.new('LocalScript', ESP)
 
 	storage = script.Parent.Parent.Parent.Storage
@@ -436,8 +435,8 @@ local function TPOA_fake_script() -- ESP.ESPScript
 		end
 	end)
 end
-coroutine.wrap(TPOA_fake_script)()
-local function ZVMBF_fake_script() -- NoBlackOut.NBOScript 
+coroutine.wrap(GSUGULN_fake_script)()
+local function XMAJ_fake_script() -- NoBlackOut.NBOScript 
 	local script = Instance.new('LocalScript', NoBlackOut)
 
 	pl = game.Players.LocalPlayer
@@ -448,8 +447,8 @@ local function ZVMBF_fake_script() -- NoBlackOut.NBOScript
 	
 	--game.Lighting.Atmosphere:Destroy()
 end
-coroutine.wrap(ZVMBF_fake_script)()
-local function IRFFEX_fake_script() -- Noclip.NoclipScript 
+coroutine.wrap(XMAJ_fake_script)()
+local function XEHLGIT_fake_script() -- Noclip.NoclipScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	pl = game.Players.LocalPlayer
@@ -490,38 +489,52 @@ local function IRFFEX_fake_script() -- Noclip.NoclipScript
 		end
 	end)
 end
-coroutine.wrap(IRFFEX_fake_script)()
-local function ZPBNPH_fake_script() -- InfJump.LocalScript 
+coroutine.wrap(XEHLGIT_fake_script)()
+local function VAUJII_fake_script() -- InfJump.LocalScript 
 	local script = Instance.new('LocalScript', InfJump)
 
-	script.Parent.MouseButton1Up:Connect(function()
+	infon = false
+	
+	function therealfunction()
 		while task.wait() do
-			if game.Players.LocalPlayer.Character.Humanoid.Jump == true then
-				local part = Instance.new("Part")
-				part.Transparency = 1
-				part.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
-				part.Position = game.Players.LocalPlayer.Character["HumanoidRootPart"].Position + Vector3.new(0, -3.575, 0)
-				task.wait()
-				part:Destroy()
+			if infon == true then
+				if game.Players.LocalPlayer.Character.Humanoid.Jump == true then
+					if script.Parent.Text ~= "InfJump: ON" then script.Parent.Text = "InfJump: ON" end
+					local part = Instance.new("Part")
+					part.Transparency = 1
+					part.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+					part.Position = game.Players.LocalPlayer.Character["HumanoidRootPart"].Position + Vector3.new(0, -3.575, 0)
+					task.wait()
+					part:Destroy()
+				end
+			else
+				script.Parent.Text = "InfJump: OFF"
+				break
 			end
 		end
+	end
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		infon = not infon
+		therealfunction()
 	end)
 end
-coroutine.wrap(ZPBNPH_fake_script)()
-local function LWPMHJX_fake_script() -- WS.LocalScript 
+coroutine.wrap(VAUJII_fake_script)()
+local function WYTDZY_fake_script() -- WS.LocalScript 
 	local script = Instance.new('LocalScript', WS)
 
 	function loop()
 		local hum = game.Players.LocalPlayer.Character.Humanoid
-		spawn(function()
-			while task.wait() do
-				if script.Parent.Visible == true or script.Parent.Parent.Keep.WSOn.Value == true then
-					hum.WalkSpeed = script.Parent.Text
-				elseif script.Parent.Visible == false and script.Parent.Parent.Keep.WSOn.Value == false then
-					break
-				end
+		while task.wait() do
+			if script.Parent.Visible == true or script.Parent.Parent.Keep.Text == "Loop WS: ON" then
+				hum.WalkSpeed = script.Parent.Text
+			elseif script.Parent.Visible == false and script.Parent.Parent.Keep.Text ~= "Loop WS: ON" then
+				spawn(function()
+					loop()
+				end)
+				break
 			end
-		end)
+		end
 	end
 	
 	while task.wait(1) do
@@ -530,8 +543,8 @@ local function LWPMHJX_fake_script() -- WS.LocalScript
 		end
 	end
 end
-coroutine.wrap(LWPMHJX_fake_script)()
-local function NSZBU_fake_script() -- WS_2.LocalScript 
+coroutine.wrap(WYTDZY_fake_script)()
+local function FALIV_fake_script() -- WS_2.LocalScript 
 	local script = Instance.new('LocalScript', WS_2)
 
 	fold = script.Parent.Parent
@@ -541,24 +554,23 @@ local function NSZBU_fake_script() -- WS_2.LocalScript
 		ws.Visible = not ws.Visible
 	end)
 end
-coroutine.wrap(NSZBU_fake_script)()
-local function FDNQALN_fake_script() -- Keep.LocalScript 
+coroutine.wrap(FALIV_fake_script)()
+local function BBYCWFR_fake_script() -- Keep.LocalScript 
 	local script = Instance.new('LocalScript', Keep)
 
-	bool = Instance.new("BoolValue", script.Parent)
-	bool.Name = "WSOn"
+	val = false
 	
 	script.Parent.MouseButton1Up:Connect(function()
-		bool.Value = not bool.Value
-		if bool.Value == true then
+		val = not val
+		if val == true then
 			script.Parent.Text = "Loop WS: ON"
 		else
 			script.Parent.Text = "Loop WS: OFF"
 		end
 	end)
 end
-coroutine.wrap(FDNQALN_fake_script)()
-local function BUSK_fake_script() -- BypassAnti.LocalScript 
+coroutine.wrap(BBYCWFR_fake_script)()
+local function LWVBEX_fake_script() -- BypassAnti.LocalScript 
 	local script = Instance.new('LocalScript', BypassAnti)
 
 	bool = Instance.new("BoolValue", script.Parent.Parent.Parent.Storage)
@@ -585,8 +597,8 @@ local function BUSK_fake_script() -- BypassAnti.LocalScript
 		bool.Value = true
 	end)
 end
-coroutine.wrap(BUSK_fake_script)()
-local function VFUCVEV_fake_script() -- ToRandom.LocalScript 
+coroutine.wrap(LWVBEX_fake_script)()
+local function QEPZEME_fake_script() -- ToRandom.LocalScript 
 	local script = Instance.new('LocalScript', ToRandom)
 
 	storagefold = script.Parent.Parent.Parent.Storage
@@ -614,12 +626,12 @@ local function VFUCVEV_fake_script() -- ToRandom.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VFUCVEV_fake_script)()
-local function USYBTJG_fake_script() -- Rejoin.LocalScript 
+coroutine.wrap(QEPZEME_fake_script)()
+local function DOWAU_fake_script() -- Rejoin.LocalScript 
 	local script = Instance.new('LocalScript', Rejoin)
 
 	script.Parent.MouseButton1Up:Connect(function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
 	end)
 end
-coroutine.wrap(USYBTJG_fake_script)()
+coroutine.wrap(DOWAU_fake_script)()
