@@ -41,7 +41,7 @@ local Storage = Instance.new("Folder")
 --Properties:
 
 FTF.Name = "FTF"
-FTF.Parent = game.CoreGui
+FTF.Parent = game.CoreGui -- this should be here
 FTF.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
