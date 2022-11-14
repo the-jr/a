@@ -1,0 +1,625 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local FTF = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Exit = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Minimize = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Label = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local Key = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local Buttons = Instance.new("Folder")
+local ESP = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local NoBlackOut = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Noclip = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local InfJump = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local WS = Instance.new("TextBox")
+local UICorner_11 = Instance.new("UICorner")
+local WS_2 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local Keep = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local BypassAnti = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local ToRandom = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local Rejoin = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local Storage = Instance.new("Folder")
+
+--Properties:
+
+FTF.Name = "FTF"
+FTF.Parent = game.CoreGui
+FTF.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = FTF
+Main.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Main.Position = UDim2.new(0, 0, 0.631364584, 0)
+Main.Size = UDim2.new(0.247361943, 0, 0.367311627, 0)
+
+UICorner.Parent = Main
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.Size = UDim2.new(1, 0, 0.100000001, 0)
+
+UICorner_2.Parent = Title
+
+Exit.Name = "Exit"
+Exit.Parent = Title
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.Position = UDim2.new(0.899849892, 0, 0, 0)
+Exit.Size = UDim2.new(0.100000001, 0, 1, 0)
+Exit.Font = Enum.Font.Bangers
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+UICorner_3.Parent = Exit
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Title
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0.79570061, 0, 0, 0)
+Minimize.Size = UDim2.new(0.100000001, 0, 1, 0)
+Minimize.Font = Enum.Font.Bangers
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+
+UICorner_4.Parent = Minimize
+
+Label.Name = "Label"
+Label.Parent = Title
+Label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Label.Position = UDim2.new(0.0374937467, 0, 1.52481174, 0)
+Label.Size = UDim2.new(0.925012529, 0, 2, 0)
+Label.Font = Enum.Font.Roboto
+Label.Text = "Flee The Facility v1.4"
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextScaled = true
+Label.TextSize = 14.000
+Label.TextWrapped = true
+
+UICorner_5.Parent = Label
+
+Key.Name = "Key"
+Key.Parent = Title
+Key.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Key.Position = UDim2.new(0.0827811956, 0, 0, 0)
+Key.Size = UDim2.new(0.711218119, 0, 0.999999464, 0)
+Key.Font = Enum.Font.Roboto
+Key.Text = "GB = Game-Breaking; NB = Needs Bypass"
+Key.TextColor3 = Color3.fromRGB(255, 255, 255)
+Key.TextScaled = true
+Key.TextSize = 14.000
+Key.TextWrapped = true
+
+UICorner_6.Parent = Key
+
+Buttons.Name = "Buttons"
+Buttons.Parent = Main
+
+ESP.Name = "ESP"
+ESP.Parent = Buttons
+ESP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ESP.Position = UDim2.new(0.0374937542, 0, 0.44358182, 0)
+ESP.Size = UDim2.new(0.25, 0, 0.174999997, 0)
+ESP.Font = Enum.Font.Ubuntu
+ESP.Text = "ESP: OFF"
+ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP.TextScaled = true
+ESP.TextSize = 14.000
+ESP.TextWrapped = true
+
+UICorner_7.Parent = ESP
+
+NoBlackOut.Name = "NoBlackOut"
+NoBlackOut.Parent = Buttons
+NoBlackOut.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NoBlackOut.Position = UDim2.new(0.374937475, 0, 0.44358182, 0)
+NoBlackOut.Size = UDim2.new(0.25, 0, 0.174999997, 0)
+NoBlackOut.Font = Enum.Font.Ubuntu
+NoBlackOut.Text = "NoBlackOut"
+NoBlackOut.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoBlackOut.TextScaled = true
+NoBlackOut.TextSize = 14.000
+NoBlackOut.TextWrapped = true
+
+UICorner_8.Parent = NoBlackOut
+
+Noclip.Name = "Noclip"
+Noclip.Parent = Buttons
+Noclip.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Noclip.Position = UDim2.new(0.712381124, 0, 0.700027585, 0)
+Noclip.Size = UDim2.new(0.25, 0, 0.174999997, 0)
+Noclip.Font = Enum.Font.Ubuntu
+Noclip.Text = "NB-Noclip: OFF"
+Noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Noclip.TextScaled = true
+Noclip.TextSize = 14.000
+Noclip.TextWrapped = true
+
+UICorner_9.Parent = Noclip
+
+InfJump.Name = "InfJump"
+InfJump.Parent = Buttons
+InfJump.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+InfJump.Position = UDim2.new(0.712381184, 0, 0.44358179, 0)
+InfJump.Size = UDim2.new(0.25, 0, 0.174999997, 0)
+InfJump.Font = Enum.Font.Ubuntu
+InfJump.Text = "InfJump"
+InfJump.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfJump.TextScaled = true
+InfJump.TextSize = 14.000
+InfJump.TextWrapped = true
+
+UICorner_10.Parent = InfJump
+
+WS.Name = "WS"
+WS.Parent = Buttons
+WS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WS.Position = UDim2.new(0.273830593, 0, -0.200998172, 0)
+WS.Size = UDim2.new(0.49007833, 0, 0.208899468, 0)
+WS.Visible = false
+WS.Font = Enum.Font.SourceSansBold
+WS.Text = "16"
+WS.TextColor3 = Color3.fromRGB(255, 255, 255)
+WS.TextScaled = true
+WS.TextSize = 14.000
+WS.TextWrapped = true
+
+UICorner_11.Parent = WS
+
+WS_2.Name = "WS"
+WS_2.Parent = Buttons
+WS_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WS_2.Position = UDim2.new(-0.003773954, 0, -0.200998172, 0)
+WS_2.Size = UDim2.new(0.27749294, 0, 0.209869906, 0)
+WS_2.Font = Enum.Font.Gotham
+WS_2.Text = "WS"
+WS_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+WS_2.TextScaled = true
+WS_2.TextSize = 14.000
+WS_2.TextWrapped = true
+
+UICorner_12.Parent = WS_2
+
+Keep.Name = "Keep"
+Keep.Parent = Buttons
+Keep.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Keep.Position = UDim2.new(-0.003773954, 0, -0.381203324, 0)
+Keep.Size = UDim2.new(0.27749294, 0, 0.180205151, 0)
+Keep.Font = Enum.Font.Gotham
+Keep.Text = "Loop WS: OFF"
+Keep.TextColor3 = Color3.fromRGB(255, 255, 255)
+Keep.TextScaled = true
+Keep.TextSize = 14.000
+Keep.TextWrapped = true
+
+UICorner_13.Parent = Keep
+
+BypassAnti.Name = "BypassAnti"
+BypassAnti.Parent = Buttons
+BypassAnti.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BypassAnti.Position = UDim2.new(0.372725338, 0, 0.700027585, 0)
+BypassAnti.Size = UDim2.new(0.25, 0, 0.174999997, 0)
+BypassAnti.Font = Enum.Font.Ubuntu
+BypassAnti.Text = "GB-Bypass AntiCheat"
+BypassAnti.TextColor3 = Color3.fromRGB(255, 255, 255)
+BypassAnti.TextScaled = true
+BypassAnti.TextSize = 14.000
+BypassAnti.TextWrapped = true
+
+UICorner_14.Parent = BypassAnti
+
+ToRandom.Name = "ToRandom"
+ToRandom.Parent = Buttons
+ToRandom.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ToRandom.Position = UDim2.new(0.0368434489, 0, 0.700027585, 0)
+ToRandom.Size = UDim2.new(0.25, 0, 0.174999997, 0)
+ToRandom.Font = Enum.Font.Ubuntu
+ToRandom.Text = "NB-To Random"
+ToRandom.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToRandom.TextScaled = true
+ToRandom.TextSize = 14.000
+ToRandom.TextWrapped = true
+
+UICorner_15.Parent = ToRandom
+
+Rejoin.Name = "Rejoin"
+Rejoin.Parent = Buttons
+Rejoin.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Rejoin.Position = UDim2.new(0.0374937467, 0, 0.9166134, 0)
+Rejoin.Size = UDim2.new(0.924887478, 0, 0.0831716284, 0)
+Rejoin.Font = Enum.Font.Ubuntu
+Rejoin.Text = "Rejoin"
+Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
+Rejoin.TextScaled = true
+Rejoin.TextSize = 14.000
+Rejoin.TextWrapped = true
+
+UICorner_16.Parent = Rejoin
+
+Storage.Name = "Storage"
+Storage.Parent = Main
+
+-- Scripts:
+
+local function LOFNOWJ_fake_script() -- Main.Drag 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(LOFNOWJ_fake_script)()
+local function XBBQ_fake_script() -- Exit.ExitScript 
+	local script = Instance.new('LocalScript', Exit)
+
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(XBBQ_fake_script)()
+local function RVUNRPC_fake_script() -- Minimize.Minimize 
+	local script = Instance.new('LocalScript', Minimize)
+
+	t = script.Parent.Parent
+	mainq = t.Parent
+	button = script.Parent
+	fold = script.Parent.Parent.Parent.Buttons
+	onmini = false
+	
+	button.MouseButton1Up:Connect(function()
+		if onmini == false then
+			onmini = true
+			t.Position = UDim2.fromScale(0, 0.9)
+			mainq.BackgroundTransparency = 1
+			t.Label.Transparency = 1
+			button.Text = "+"
+			for i, v in pairs(fold:GetChildren()) do
+				if v ~= nil then
+					v.Visible = false
+				end
+			end
+		else
+			onmini = false
+			t.Position = UDim2.fromScale(0, 0)
+			mainq.BackgroundTransparency = 0
+			t.Label.Transparency = 0
+			button.Text = "-"
+			for i, v in pairs(fold:GetChildren()) do
+				if v ~= nil and v.ClassName ~= "TextBox" then
+					v.Visible = true
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(RVUNRPC_fake_script)()
+local function TPOA_fake_script() -- ESP.ESPScript 
+	local script = Instance.new('LocalScript', ESP)
+
+	storage = script.Parent.Parent.Parent.Storage
+	bhighlight = Instance.new("Highlight")
+	bhighlight.Parent = storage
+	bhighlight.FillColor = Color3.fromRGB(255, 0, 0)
+	bhighlight.OutlineColor = Color3.fromRGB(255, 0, 0)
+	bhighlight.Name = "BeastHighlight"
+	
+	phighlight = Instance.new("Highlight")
+	phighlight.Parent = storage
+	phighlight.FillColor = Color3.fromRGB(255, 255, 255)
+	phighlight.Name = "PlayerHighlight"
+	
+	chighlight = Instance.new("Highlight")
+	chighlight.Parent = storage
+	chighlight.FillColor = Color3.fromRGB(0, 150, 255)
+	chighlight.OutlineColor = Color3.fromRGB(0, 255, 255)
+	chighlight.Name = "ComputerHighlight"
+	game.Players.RespawnTime = 0
+	
+	onq = false
+	
+	function plr()
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if onq == true then
+				storage.PlayerHighlight:Clone().Parent = v.Character
+				for i, scr in pairs(v.Character:GetChildren()) do
+					if scr:IsA("LocalScript") and scr.Name == "PowersLocalScript" then
+						remove(v.Character)
+						storage.BeastHighlight:Clone().Parent = v.Character
+					end
+				end
+			else
+				remove(v.Character)
+			end
+		end
+	end
+	
+	function remove(thing)
+		for i, v in pairs(thing:GetChildren()) do
+			if v:IsA("Highlight") then
+				v:Destroy()
+			elseif v:IsA("BasePart") or v:IsA("Accessory") then
+				remove(v)
+			end
+		end
+	end
+	
+	function main()
+		--computer
+		for i, v in pairs(game.Workspace:GetDescendants()) do
+			if v ~= nil and v:IsA("Model") and v.Name == "ComputerTable" then
+				if onq == true then
+					storage.ComputerHighlight:Clone().Parent = v
+				else
+					remove(v)
+				end
+			end
+		end
+		--players + beast
+		plr()
+	end
+	
+	debounce = 0
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		if debounce == 0 then
+			debounce = 1
+			spawn(function()
+				if onq == false then
+					onq = true
+					script.Parent.Text = "ESP: ON"
+					main()
+				else
+					onq = false
+					script.Parent.Text = "ESP: OFF"
+					main()
+				end
+			end)
+			task.wait(0.25)
+			debounce = 0
+		end
+	end)
+end
+coroutine.wrap(TPOA_fake_script)()
+local function ZVMBF_fake_script() -- NoBlackOut.NBOScript 
+	local script = Instance.new('LocalScript', NoBlackOut)
+
+	pl = game.Players.LocalPlayer
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		pl.PlayerGui.BlackOutScreenGui:Destroy()
+	end)
+	
+	--game.Lighting.Atmosphere:Destroy()
+end
+coroutine.wrap(ZVMBF_fake_script)()
+local function IRFFEX_fake_script() -- Noclip.NoclipScript 
+	local script = Instance.new('LocalScript', Noclip)
+
+	pl = game.Players.LocalPlayer
+	char = pl.Character
+	
+	on = false
+	
+	storagefold = script.Parent.Parent.Parent.Storage
+	thing = storagefold:WaitForChild("BypassChecker", 1)
+	
+	function res()
+		game:GetService("RunService").Stepped:Connect(function()
+			for i, v in pairs(char:GetChildren()) do
+				if v:IsA("BasePart") and on == true then
+					if thing.Value then
+						v.CanCollide = false
+					else
+						script.Parent.Text = "NB-Noclip: OFF"
+						on = false
+						warn("Bypass needed to work for noclip!")
+						break
+					end
+				elseif on == false then
+					break
+				end
+			end
+		end)
+	end
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		if on == false then
+			on = true
+			script.Parent.Text = "NB-Noclip: ON"
+			res()
+		else
+			on = false
+			script.Parent.Text = "NB-Noclip: OFF"
+		end
+	end)
+end
+coroutine.wrap(IRFFEX_fake_script)()
+local function ZPBNPH_fake_script() -- InfJump.LocalScript 
+	local script = Instance.new('LocalScript', InfJump)
+
+	script.Parent.MouseButton1Up:Connect(function()
+		while task.wait() do
+			if game.Players.LocalPlayer.Character.Humanoid.Jump == true then
+				local part = Instance.new("Part")
+				part.Transparency = 1
+				part.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+				part.Position = game.Players.LocalPlayer.Character["HumanoidRootPart"].Position + Vector3.new(0, -3.575, 0)
+				task.wait()
+				part:Destroy()
+			end
+		end
+	end)
+end
+coroutine.wrap(ZPBNPH_fake_script)()
+local function LWPMHJX_fake_script() -- WS.LocalScript 
+	local script = Instance.new('LocalScript', WS)
+
+	function loop()
+		local hum = game.Players.LocalPlayer.Character.Humanoid
+		spawn(function()
+			while task.wait() do
+				if script.Parent.Visible == true or script.Parent.Parent.Keep.WSOn.Value == true then
+					hum.WalkSpeed = script.Parent.Text
+				elseif script.Parent.Visible == false and script.Parent.Parent.Keep.WSOn.Value == false then
+					break
+				end
+			end
+		end)
+	end
+	
+	while task.wait(1) do
+		if script.Parent.Visible then
+			loop()
+		end
+	end
+end
+coroutine.wrap(LWPMHJX_fake_script)()
+local function NSZBU_fake_script() -- WS_2.LocalScript 
+	local script = Instance.new('LocalScript', WS_2)
+
+	fold = script.Parent.Parent
+	ws = fold.WS
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		ws.Visible = not ws.Visible
+	end)
+end
+coroutine.wrap(NSZBU_fake_script)()
+local function FDNQALN_fake_script() -- Keep.LocalScript 
+	local script = Instance.new('LocalScript', Keep)
+
+	bool = Instance.new("BoolValue", script.Parent)
+	bool.Name = "WSOn"
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		bool.Value = not bool.Value
+		if bool.Value == true then
+			script.Parent.Text = "Loop WS: ON"
+		else
+			script.Parent.Text = "Loop WS: OFF"
+		end
+	end)
+end
+coroutine.wrap(FDNQALN_fake_script)()
+local function BUSK_fake_script() -- BypassAnti.LocalScript 
+	local script = Instance.new('LocalScript', BypassAnti)
+
+	bool = Instance.new("BoolValue", script.Parent.Parent.Parent.Storage)
+	bool.Name = "BypassChecker"
+	bool.Value = false
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		task.wait(.1)
+		char = game.Players.LocalPlayer.Character
+		root = char.HumanoidRootPart
+		root:Destroy()
+		newroot = Instance.new("Part")
+		newroot.Name = "HumanoidRootPart"
+		newroot.CFrame = char.Torso.CFrame
+		newroot.Size = Vector3.new(2,2,1)
+		newroot.Transparency = 1
+		newroot.Parent = char
+		newroot.Color = Color3.fromRGB(163,162,165)
+		attach = Instance.new("Attachment", newroot)
+		attach.Name = "RootAttachment"
+		joint = Instance.new("Motor6D", newroot)
+		joint.Part0 = newroot
+		joint.Part1 = char.Torso
+		bool.Value = true
+	end)
+end
+coroutine.wrap(BUSK_fake_script)()
+local function VFUCVEV_fake_script() -- ToRandom.LocalScript 
+	local script = Instance.new('LocalScript', ToRandom)
+
+	storagefold = script.Parent.Parent.Parent.Storage
+	thing = storagefold:WaitForChild("BypassChecker", 1)
+	
+	function dothething()
+		task.wait(.1)
+		local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local amount = #game.Players:GetPlayers()
+		if amount == 1 then return end
+		local numbuh = math.random(1, #game.Players:GetPlayers())
+		local nameofpl = game.Players:GetPlayers()[numbuh]
+		if nameofpl.Name ~= game.Players.LocalPlayer.Name then
+			root.CFrame = nameofpl.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 5)
+		else
+			dothething()
+		end
+	end
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		if thing.Value then
+			dothething()
+		else
+			warn("Bypass needed to work for teleportation!")
+		end
+	end)
+end
+coroutine.wrap(VFUCVEV_fake_script)()
+local function USYBTJG_fake_script() -- Rejoin.LocalScript 
+	local script = Instance.new('LocalScript', Rejoin)
+
+	script.Parent.MouseButton1Up:Connect(function()
+		game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+	end)
+end
+coroutine.wrap(USYBTJG_fake_script)()
