@@ -1,4 +1,4 @@
--- v1.4 fixed some stuff
+-- v1.4 still HAHAHDSHADSHADHSAHSDHASHDSAhdh
 
 -- Instances:
 
@@ -34,14 +34,16 @@ local BypassAnti = Instance.new("TextButton")
 local UICorner_14 = Instance.new("UICorner")
 local ToRandom = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
-local Rejoin = Instance.new("TextButton")
+local BeastAutoHit = Instance.new("TextButton")
 local UICorner_16 = Instance.new("UICorner")
+local Rejoin = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
 local Storage = Instance.new("Folder")
 
 --Properties:
 
 FTF.Name = "FTF"
-FTF.Parent = game.CoreGui -- this should be here
+FTF.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 FTF.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
@@ -247,11 +249,25 @@ ToRandom.TextWrapped = true
 
 UICorner_15.Parent = ToRandom
 
+BeastAutoHit.Name = "BeastAutoHit"
+BeastAutoHit.Parent = Buttons
+BeastAutoHit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BeastAutoHit.Position = UDim2.new(0.0374937616, 0, 0.91661346, 0)
+BeastAutoHit.Size = UDim2.new(0.43372941, 0, 0.0831716284, 0)
+BeastAutoHit.Font = Enum.Font.Ubuntu
+BeastAutoHit.Text = "Beast Auto Hit"
+BeastAutoHit.TextColor3 = Color3.fromRGB(255, 255, 255)
+BeastAutoHit.TextScaled = true
+BeastAutoHit.TextSize = 14.000
+BeastAutoHit.TextWrapped = true
+
+UICorner_16.Parent = BeastAutoHit
+
 Rejoin.Name = "Rejoin"
 Rejoin.Parent = Buttons
 Rejoin.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Rejoin.Position = UDim2.new(0.0374937467, 0, 0.9166134, 0)
-Rejoin.Size = UDim2.new(0.924887478, 0, 0.0831716284, 0)
+Rejoin.Position = UDim2.new(0.522059083, 0, 0.91661346, 0)
+Rejoin.Size = UDim2.new(0.440322071, 0, 0.0831716284, 0)
 Rejoin.Font = Enum.Font.Ubuntu
 Rejoin.Text = "Rejoin"
 Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -259,14 +275,14 @@ Rejoin.TextScaled = true
 Rejoin.TextSize = 14.000
 Rejoin.TextWrapped = true
 
-UICorner_16.Parent = Rejoin
+UICorner_17.Parent = Rejoin
 
 Storage.Name = "Storage"
 Storage.Parent = Main
 
 -- Scripts:
 
-local function XKNUSET_fake_script() -- Main.Drag 
+local function VTXDK_fake_script() -- Main.Drag 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -304,16 +320,16 @@ local function XKNUSET_fake_script() -- Main.Drag
 		end
 	end)
 end
-coroutine.wrap(XKNUSET_fake_script)()
-local function IZINBX_fake_script() -- Exit.ExitScript 
+coroutine.wrap(VTXDK_fake_script)()
+local function BBJO_fake_script() -- Exit.ExitScript 
 	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.MouseButton1Up:Connect(function()
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(IZINBX_fake_script)()
-local function TBGVUH_fake_script() -- Minimize.Minimize 
+coroutine.wrap(BBJO_fake_script)()
+local function JUJK_fake_script() -- Minimize.Minimize 
 	local script = Instance.new('LocalScript', Minimize)
 
 	t = script.Parent.Parent
@@ -348,8 +364,8 @@ local function TBGVUH_fake_script() -- Minimize.Minimize
 		end
 	end)
 end
-coroutine.wrap(TBGVUH_fake_script)()
-local function GSUGULN_fake_script() -- ESP.ESPScript 
+coroutine.wrap(JUJK_fake_script)()
+local function RUIZA_fake_script() -- ESP.ESPScript 
 	local script = Instance.new('LocalScript', ESP)
 
 	storage = script.Parent.Parent.Parent.Storage
@@ -435,8 +451,8 @@ local function GSUGULN_fake_script() -- ESP.ESPScript
 		end
 	end)
 end
-coroutine.wrap(GSUGULN_fake_script)()
-local function XMAJ_fake_script() -- NoBlackOut.NBOScript 
+coroutine.wrap(RUIZA_fake_script)()
+local function KYYVMQY_fake_script() -- NoBlackOut.NBOScript 
 	local script = Instance.new('LocalScript', NoBlackOut)
 
 	pl = game.Players.LocalPlayer
@@ -447,8 +463,8 @@ local function XMAJ_fake_script() -- NoBlackOut.NBOScript
 	
 	--game.Lighting.Atmosphere:Destroy()
 end
-coroutine.wrap(XMAJ_fake_script)()
-local function XEHLGIT_fake_script() -- Noclip.NoclipScript 
+coroutine.wrap(KYYVMQY_fake_script)()
+local function SZBMONC_fake_script() -- Noclip.NoclipScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	pl = game.Players.LocalPlayer
@@ -489,8 +505,8 @@ local function XEHLGIT_fake_script() -- Noclip.NoclipScript
 		end
 	end)
 end
-coroutine.wrap(XEHLGIT_fake_script)()
-local function VAUJII_fake_script() -- InfJump.LocalScript 
+coroutine.wrap(SZBMONC_fake_script)()
+local function FRRI_fake_script() -- InfJump.LocalScript 
 	local script = Instance.new('LocalScript', InfJump)
 
 	infon = false
@@ -519,8 +535,8 @@ local function VAUJII_fake_script() -- InfJump.LocalScript
 		therealfunction()
 	end)
 end
-coroutine.wrap(VAUJII_fake_script)()
-local function WYTDZY_fake_script() -- WS.LocalScript 
+coroutine.wrap(FRRI_fake_script)()
+local function EPYMCHZ_fake_script() -- WS.LocalScript 
 	local script = Instance.new('LocalScript', WS)
 
 	function loop()
@@ -543,8 +559,8 @@ local function WYTDZY_fake_script() -- WS.LocalScript
 		end
 	end
 end
-coroutine.wrap(WYTDZY_fake_script)()
-local function FALIV_fake_script() -- WS_2.LocalScript 
+coroutine.wrap(EPYMCHZ_fake_script)()
+local function DDWNNXJ_fake_script() -- WS_2.LocalScript 
 	local script = Instance.new('LocalScript', WS_2)
 
 	fold = script.Parent.Parent
@@ -554,8 +570,8 @@ local function FALIV_fake_script() -- WS_2.LocalScript
 		ws.Visible = not ws.Visible
 	end)
 end
-coroutine.wrap(FALIV_fake_script)()
-local function BBYCWFR_fake_script() -- Keep.LocalScript 
+coroutine.wrap(DDWNNXJ_fake_script)()
+local function FGYEHWT_fake_script() -- Keep.LocalScript 
 	local script = Instance.new('LocalScript', Keep)
 
 	val = false
@@ -569,8 +585,8 @@ local function BBYCWFR_fake_script() -- Keep.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BBYCWFR_fake_script)()
-local function LWVBEX_fake_script() -- BypassAnti.LocalScript 
+coroutine.wrap(FGYEHWT_fake_script)()
+local function TLQDUH_fake_script() -- BypassAnti.LocalScript 
 	local script = Instance.new('LocalScript', BypassAnti)
 
 	bool = Instance.new("BoolValue", script.Parent.Parent.Parent.Storage)
@@ -597,8 +613,8 @@ local function LWVBEX_fake_script() -- BypassAnti.LocalScript
 		bool.Value = true
 	end)
 end
-coroutine.wrap(LWVBEX_fake_script)()
-local function QEPZEME_fake_script() -- ToRandom.LocalScript 
+coroutine.wrap(TLQDUH_fake_script)()
+local function WZIMQ_fake_script() -- ToRandom.LocalScript 
 	local script = Instance.new('LocalScript', ToRandom)
 
 	storagefold = script.Parent.Parent.Parent.Storage
@@ -626,12 +642,68 @@ local function QEPZEME_fake_script() -- ToRandom.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QEPZEME_fake_script)()
-local function DOWAU_fake_script() -- Rejoin.LocalScript 
+coroutine.wrap(WZIMQ_fake_script)()
+local function VVGXZI_fake_script() -- BeastAutoHit.LocalScript 
+	local script = Instance.new('LocalScript', BeastAutoHit)
+
+	on = false
+	
+	pl = game.Players.LocalPlayer
+	
+	mouse = pl:GetMouse()
+	
+	function main()
+		mouse.Button1Up:Connect(function()
+			local num = 0
+			for i, v in pairs(pl.Character:GetChildren()) do
+				if v.Name == "PowersLocalScript" then
+					num = 1
+				end
+			end
+			if num == 1 then
+				if on == true then
+					task.wait(.3)
+					local root = pl.Character.HumanoidRootPart
+					local currentpos = root.CFrame
+					local plrs = game.Players:GetPlayers()
+					local plrtarget = plrs[math.random(#plrs)]
+					if plrtarget.Name == pl.Name then
+						plrtarget = plrs[math.random(#plrs)]
+					end
+					if plrtarget.Name == pl.Name then
+						plrtarget = plrs[math.random(#plrs)]
+					end
+					if plrtarget.Name == pl.Name then
+						print("wow we had to check 3 times and all 3 times you were chosen. you are special.")
+						plrtarget = plrs[math.random(#plrs)]
+					end
+					local goto = plrtarget.Character.HumanoidRootPart
+					root.CFrame = goto.CFrame * CFrame.new(0,0,2)
+					task.wait()
+					root.CFrame = currentpos
+				end
+			else
+				warn("man be the beast first!!!")
+			end
+		end)
+	end
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		on = not on
+	end)
+	
+	repeat
+		task.wait(1)
+	until pl.Character:FindFirstChild("Animate")
+	
+	main()
+end
+coroutine.wrap(VVGXZI_fake_script)()
+local function PJQPLZV_fake_script() -- Rejoin.LocalScript 
 	local script = Instance.new('LocalScript', Rejoin)
 
 	script.Parent.MouseButton1Up:Connect(function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
 	end)
 end
-coroutine.wrap(DOWAU_fake_script)()
+coroutine.wrap(PJQPLZV_fake_script)()
